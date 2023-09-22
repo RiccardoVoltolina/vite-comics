@@ -25,6 +25,10 @@
 
 <template>
   <AppHeader/>
+  <AppMainContent/>
+  <AppJumbotron/>
+  <AppFooter1/>
+  <AppFooter2/>
 
 </template>
 
