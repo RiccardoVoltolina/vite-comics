@@ -34,7 +34,7 @@ export default{
                 <a href="">Shop DC</a>
                 <a href="">Shop DC Collectibles</a>
             </div>
-            <div class="d-flex flex-column ps-5">
+            <div class="d-flex flex-column ps-5 pb-5">
                 <h3 class="">DC</h3>
                 <a href="">Terms Of Use</a>
                 <a href="">Privacy Policy (New)</a>
@@ -98,7 +98,6 @@ export default{
             margin-left: 90px;
             width: 100%;
             background-image: url(../img/dc-logo-bg.png);
-            margin-top: -3rem;
             background-repeat: no-repeat;
         }
 
