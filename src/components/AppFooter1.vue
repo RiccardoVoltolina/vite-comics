@@ -57,9 +57,12 @@ export default{
                 <a href="">DC Power Visa</a>
             </div>
 
+            <div class="immagine_background">
+            </div>
+
             
 
-            <img src="../img/dc-logo-bg.png" alt="">
+            
             
 
             
@@ -91,11 +94,14 @@ export default{
             color: gray;
         }
 
-        img {
+        .immagine_background {
+            margin-left: 90px;
+            width: 100%;
+            background-image: url(../img/dc-logo-bg.png);
             margin-top: -3rem;
-            margin-bottom: -3rem;
-            margin-left: 10rem;
-            height: 600px;
+            background-repeat: no-repeat;
         }
+
+
     }
 </style>
