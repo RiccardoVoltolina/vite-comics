@@ -9,6 +9,27 @@ export default{
 
     data() {
         return {
+            mainUtilities: [{
+                img:"src/img/buy-comics-digital-comics.png",
+                utilitiesInfo:'DIGITAL COMICS',
+            },
+            {
+                img:"src/img/buy-comics-merchandise.png",
+                utilitiesInfo:'DC MERCHANDISE',
+            },
+            {
+                img:"src/img/buy-comics-subscriptions.png",
+                utilitiesInfo: 'SUBSCRIPTION',
+            },
+            {
+                img:"src/img/buy-comics-shop-locator.png",
+                utilitiesInfo:'COMIC SHOP LOCATOR',
+            },
+            {
+                img:"src/img/buy-dc-power-visa.svg",
+                utilitiesInfo:'DC POWER VISA',
+            },
+        ]
             
         }
     },
@@ -20,28 +41,11 @@ export default{
 <template>
     <section class="py-5">
         <div class="container w-75 d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center">
-                <img src="../img/buy-comics-digital-comics.png" alt="">
-                <div class="ps-3">DIGITAL COMICS</div>
+            <div v-for="main in mainUtilities" class="d-flex align-items-center">
+                <img :src="main.img" alt="">
+                <div class="ps-3">{{ main.utilitiesInfo }}</div>
             </div>
-            <div class="d-flex align-items-center">
-                <img src="../img/buy-comics-merchandise.png" alt="">
-                <div class="ps-3">DC MERCHANDISE</div>
-            </div>
-            <div class="d-flex align-items-center">
-                <img src="../img/buy-comics-subscriptions.png" alt="">
-                <div class="ps-3">SUBSCRIPTION</div>
-            </div>
-            <div class="d-flex align-items-center">
-                <img src="../img/buy-comics-shop-locator.png" alt="">
-                <div class="ps-3">COMIC SHOP LOCATOR</div>
-
-
-            </div>
-            <div class="d-flex align-items-center">
-                <img src="../img/buy-dc-power-visa.svg" alt="">
-                <div class="ps-3">DC POWER VISA</div>
-            </div>
+            
         </div>
     </section>
 </template>
