@@ -9,9 +9,10 @@ export default{
 
     data() {
         return {
-
+            navSections: ['CHARACTERS', 'COMICS', 'MOVIES', 'TV', 'GAMES', 'COLLECTIBLES', 'VIDEOS', 'FANS', 'NEWS', 'SHOP' ]
         }
     },
+  
     
 
 }
@@ -25,16 +26,7 @@ export default{
                 <img src="../../src/img/dc-logo.png" alt="">
             </div>
             <div class="col-8 d-flex justify-content-between align-items-center">
-                <a href="">CHARACTERS</a>
-                <a href="">COMICS</a>
-                <a href="">MOVIES</a>
-                <a href="">TV</a>
-                <a href="">GAMES</a>
-                <a href="">COLLECTIBLES</a>
-                <a href="">VIDEOS</a>
-                <a href="">FANS</a>
-                <a href="">NEWS</a>
-                <a href="">SHOP</a>
+                <a v-for="(navSection, i) in navSections" href="">{{ navSection }}</a>
             </div>
             
         </div>
