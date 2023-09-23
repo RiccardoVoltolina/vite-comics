@@ -1,8 +1,4 @@
 <script>
-
-
- 
-
 export default{
 
     name: 'AppJumbotron',
@@ -33,7 +29,6 @@ export default{
             
         }
     },
-    
 
 }
 </script>
@@ -43,7 +38,7 @@ export default{
         <div class="container w-75 d-flex align-items-center justify-content-between">
             <div v-for="main in mainUtilities" class="d-flex align-items-center">
                 <img :src="main.img" alt="">
-                <div class="ps-3">{{ main.utilitiesInfo }}</div>
+                <a class="ps-3">{{ main.utilitiesInfo }}</a>
             </div>
             
         </div>

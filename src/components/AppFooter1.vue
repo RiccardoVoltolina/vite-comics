@@ -9,6 +9,10 @@ export default{
 
     data() {
         return {
+            dcComicsLinks: ['Characters','Comics', 'Movies','TV','Games', 'Videos', 'News'],
+            shopLinks: ['Shop DC', 'Shop DC Collectibles'],
+            dcLinks: ['Terms Of Use', 'Privacy Policy (New)', 'Add Choices', 'Advertising', 'Jobs', 'Subscription', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us'],
+            sitesLinks: ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa']
             
         }
     },
@@ -22,39 +26,20 @@ export default{
         <div class="container w-75 d-flex justify-content-start">
             <div class="d-flex flex-column">
                 <h3>DC COMICS</h3>
-                <a href="">Characters</a>
-                <a href="">Comics</a>
-                <a href="">Movies</a>
-                <a href="">TV</a>
-                <a href="">Games</a>
-                <a href="">Videos</a>
-                <a href="">News</a>
+                <a v-for="(dcComicsLink, i) in dcComicsLinks" href="">{{ dcComicsLink }}</a>
+               
            
                 <h3>SHOP</h3>
-                <a href="">Shop DC</a>
-                <a href="">Shop DC Collectibles</a>
+                <a v-for="(shopLink, i) in shopLinks" href="">{{ shopLink }}</a>
             </div>
             <div class="d-flex flex-column ps-5 pb-5">
                 <h3 class="">DC</h3>
-                <a href="">Terms Of Use</a>
-                <a href="">Privacy Policy (New)</a>
-                <a href="">Add Choices</a>
-                <a href="">Advertising</a>
-                <a href="">Jobs</a>
-                <a href="">Subscription</a>
-                <a href="">Talent Workshops</a>
-                <a href="">CPSC Certificates</a>
-                <a href="">Ratings</a>
-                <a href="">Shop Help</a>
-                <a href="">Contact Us</a>
+                <a v-for="(dcLink, i) in dcLinks" href="">{{ dcLink }}</a>
+        
             </div>
             <div class="d-flex flex-column ps-5">
                 <h3>SITES</h3>
-                <a href="">DC</a>
-                <a href="">MAD Magazine</a>
-                <a href="">DC Kids</a>
-                <a href="">DC Universe</a>
-                <a href="">DC Power Visa</a>
+                <a v-for="(sitesLink, i) in sitesLinks" href="">{{ sitesLink }}</a>
             </div>
 
             <div class="immagine_background">
@@ -86,16 +71,18 @@ export default{
             padding-top: 5px;
             padding-bottom: 5px;
             padding-top: 35px;
-            font-size: 25px;
+            font-size: 20px;
         }
 
         a {
             text-decoration: none;
             color: gray;
+            font-size: 10px;
         }
 
         .immagine_background {
-            margin-left: 90px;
+            margin-top: -60px;
+            margin-left: 130px;
             width: 100%;
             background-image: url(../img/dc-logo-bg.png);
             background-repeat: no-repeat;
