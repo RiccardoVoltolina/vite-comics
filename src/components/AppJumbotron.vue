@@ -53,5 +53,10 @@ export default{
         font-size: 10px;
         color: white;
         background-color: #0282f9;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
     }
 </style>

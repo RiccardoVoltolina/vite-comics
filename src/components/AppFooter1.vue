@@ -24,26 +24,30 @@ export default{
 <template>
     <section>
         <div class="container w-75 d-flex justify-content-start">
-            <div class="d-flex flex-column">
-                <h3>DC COMICS</h3>
-                <a v-for="(dcComicsLink, i) in dcComicsLinks" href="">{{ dcComicsLink }}</a>
+            <div class="col-5 d-flex">
+                
+                <div class="d-flex flex-column p_40px">
+                    <h3>DC COMICS</h3>
+                    <a v-for="(dcComicsLink, i) in dcComicsLinks" href="">{{ dcComicsLink }}</a>
+                   
                
-           
-                <h3>SHOP</h3>
-                <a v-for="(shopLink, i) in shopLinks" href="">{{ shopLink }}</a>
-            </div>
-            <div class="d-flex flex-column ps-5 pb-5">
-                <h3 class="">DC</h3>
-                <a v-for="(dcLink, i) in dcLinks" href="">{{ dcLink }}</a>
-        
-            </div>
-            <div class="d-flex flex-column ps-5">
-                <h3>SITES</h3>
-                <a v-for="(sitesLink, i) in sitesLinks" href="">{{ sitesLink }}</a>
-            </div>
+                    <h3>SHOP</h3>
+                    <a v-for="(shopLink, i) in shopLinks" href="">{{ shopLink }}</a>
+                </div>
+                <div class="d-flex flex-column ps-5 pb-5">
+                    <h3 class="">DC</h3>
+                    <a v-for="(dcLink, i) in dcLinks" href="">{{ dcLink }}</a>
+            
+                </div>
+                <div class="d-flex flex-column ps-5">
+                    <h3>SITES</h3>
+                    <a v-for="(sitesLink, i) in sitesLinks" href="">{{ sitesLink }}</a>
+                </div>
 
-            <div class="immagine_background">
+            </div>    
+            <div class="col-7 immagine_background">
             </div>
+        </div>
 
             
 
@@ -54,7 +58,6 @@ export default{
           
            
 
-        </div>
     </section>
 
 </template>
@@ -77,11 +80,15 @@ export default{
         a {
             text-decoration: none;
             color: gray;
-            font-size: 10px;
+            font-size: 10px;            
+        }
+
+        .p_40px {
+            padding-bottom: 40px;
         }
 
         .immagine_background {
-            margin-top: -60px;
+            margin-top: -70px;
             margin-left: 130px;
             width: 100%;
             background-image: url(../img/dc-logo-bg.png);
