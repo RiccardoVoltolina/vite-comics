@@ -11,12 +11,23 @@ export default{
         return {
             navSections: ['CHARACTERS', 'COMICS', 'MOVIES', 'TV', 'GAMES', 'COLLECTIBLES', 'VIDEOS', 'FANS', 'NEWS', 'SHOP' ],
             isHovered:false,
+            barraColore:'',
         }
     },
     methods: {
         setHover(valore) {
             this.isHovered = valore;
             console.log(this.isHovered);
+        },
+
+        styleCss(stileBarra){
+            if (stileBarra == true) {
+                return {
+                    'border-bottom': '2px solid #0282f9',
+                    'color': '#0282f9',
+                }
+                return '';
+            }
         }
     }
 
@@ -31,11 +42,8 @@ export default{
                 <img src="../../src/img/dc-logo.png" alt="">
             </div>
             <div class="col-8 d-flex justify-content-between align-items-center">
-                <div v-for="(navSection, i) in navSections" class="d-flex align-items-center h-100" v-if="isHovered == true" :class="hover_blue">
-
-                    <a @mouseover="setHover(true)" @mouseout="setHover(false)" href="">{{ navSection }}</a>
-                </div>
-                <div v-for="(navSection, i) in navSections" class="d-flex align-items-center h-100" v-else>
+                <div v-for="(navSection, i) in navSections" class="d-flex align-items-center h-100" :style="styleCss(isHovered)">
+                    {{ barraColore }}
 
                     <a @mouseover="setHover(true)" @mouseout="setHover(false)" href="">{{ navSection }}</a>
                 </div>
