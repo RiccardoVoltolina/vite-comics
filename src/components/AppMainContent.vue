@@ -68,16 +68,6 @@ export default{
             font-size: 15px;
         }
 
-        img {
-            max-width: 300px;
-            aspect-ratio: 1;
-        }
-
-        h5 {
-            font-size: 13px;
-            padding-top: 1rem;
-        }
-
         .load_more {
             background-color: #0282f9;
             width: fit-content;
