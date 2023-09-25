@@ -42,11 +42,11 @@ export default{
                 <img src="../../src/img/dc-logo.png" alt="">
             </div>
             <div class="col-8 d-flex justify-content-between align-items-center">
-                <div v-for="(navSection, i) in navSections" class="d-flex align-items-center h-100" :style="styleCss(isHovered)">
+                <div v-for="(navSection, i) in navSections" class="d-flex align-items-center h-100" :class="{'hover_blue' : navSection.isHovered}">
                     {{ barraColore }}
 
                     <a @mouseover="setHover(true)" @mouseout="setHover(false)" href="">{{ navSection }}</a>
-                </div>
+                </div> 
 
             </div>
             
@@ -66,15 +66,18 @@ export default{
     a {
         text-decoration: none;
         color: black;
+        align-items: center;
+        display: flex;
+        height: 100%;
     }
 
     a:hover {
         color: #0282f9;
-    }
-
-    .hover_blue {
         border-bottom: 2px solid #0282f9;
         color: #0282f9;
+
     }
+
+  
 
 </style>
