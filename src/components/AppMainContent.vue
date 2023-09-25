@@ -24,19 +24,15 @@ export default{
 
 <template>
 
-    <productItem :image="card" :title="card" :cardsArray="cardsArray" :cards="cards"> </productItem>
-   <!--  <main class="">
+    <main class="">
         <section class="bg_image"></section>
         <section class="color_dark">
             <div class="container w-75 g-0 position-relative">
                 <h3 class="current_series">CURRENT SERIES</h3>
                 <div class="row g-0 pt-5">
-                    <div class="col-2 p-3" v-for="(card, i) in cards.cards">
-                        <div class="d-flex flex-column">
-                            <img :src="card.thumb" alt="">
-                            <h5 class="text-white">{{ card.series }}</h5>
-                        </div>
-                    </div>
+                    <productItem :image="card.thumb" :title="card.series" :cardsArray="cardsArray" :cards="cardsArray.cards" v-for="(card, i) in cardsArray.cards"> </productItem>
+                    
+                      
                     <div class="pb-3">
 
                         <h3 class="load_more">LOAD MORE</h3>
@@ -47,7 +43,7 @@ export default{
             </div>
         </section>
 
-    </main> -->
+    </main>
 </template>
 
 <style lang="scss" scoped>
