@@ -1,5 +1,6 @@
 <script>
 
+import cards from "../card.js"
 
  
 
@@ -9,7 +10,7 @@ export default{
 
     data() {
         return {
-            
+            cards
         }
     },
     
@@ -18,19 +19,18 @@ export default{
 </script>
 
 <template>
-    <main class="bg-black">
-        <div class="container w-75 h-100 d-flex align-items-center">
-            <h2>Content goes here</h2>
-        </div>
+    <main class="">
+        <section class="bg_image"></section>
+
     </main>
 </template>
 
 <style lang="scss" scoped>
     main {
-        height: 100px;
-        
-        h2 {
-            color: white;
+        .bg_image {
+            height: 300px;
+            background-image: url(../img/jumbotron.jpg);
+            background-size: cover;
         }
     }
 </style>
