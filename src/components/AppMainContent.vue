@@ -1,12 +1,16 @@
 <script>
 
 import cards from "../card.js"
+import productItem from "../components/productItem.vue"
 
  
 
 export default{
 
     name: 'AppMainContent',
+    components: {
+        productItem
+    },
 
     data() {
         return {
@@ -19,7 +23,9 @@ export default{
 </script>
 
 <template>
-    <main class="">
+
+    <productItem :image="card.thumb" :title="card.series" v-for="(card, i) in cards.cards"> </productItem>
+<!--     <main class="">
         <section class="bg_image"></section>
         <section class="color_dark">
             <div class="container w-75 g-0 position-relative">
@@ -31,7 +37,7 @@ export default{
                             <h5 class="text-white">{{ card.series }}</h5>
                         </div>
                     </div>
-                    <div>
+                    <div class="pb-3">
 
                         <h3 class="load_more">LOAD MORE</h3>
                     </div>
@@ -42,7 +48,7 @@ export default{
         </section>
 
     </main>
-</template>
+ --></template>
 
 <style lang="scss" scoped>
     main {
