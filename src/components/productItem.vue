@@ -1,7 +1,7 @@
 <script>
 export default {
     name: 'prductItem',
-    props: ['image', 'title', 'cardsArray']
+    props: ['image', 'title', 'cardsArray', 'cards']
 }
 
 </script>
@@ -13,7 +13,7 @@ export default {
             <div class="container w-75 g-0 position-relative">
                 <h3 class="current_series">CURRENT SERIES</h3>
                 <div class="row g-0 pt-5">
-                    <div class="col-2 p-3" v-for="(card, i) in cards.cardsArray">
+                    <div class="col-2 p-3" v-for="(card, i) in cardsArray.cards">
                         <div class="d-flex flex-column">
                             <img :src="image" alt="">
                             <h5 class="text-white">{{ title }}</h5>
